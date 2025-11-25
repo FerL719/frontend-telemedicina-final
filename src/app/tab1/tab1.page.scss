@@ -1,0 +1,61 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+// Estilos generales de los mensajes
+.mensaje-usuario, .mensaje-bot {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+// Alineación derecha para el usuario
+.mensaje-usuario {
+  align-self: flex-end;
+  align-items: flex-end;
+
+  .burbuja {
+    background-color: #3880ff; // Azul Ionic
+    color: white;
+    border-radius: 15px 15px 0 15px;
+  }
+}
+
+// Alineación izquierda para el bot
+.mensaje-bot {
+  align-self: flex-start;
+  align-items: flex-start;
+
+  .burbuja {
+    background-color: #f1f1f1; // Gris claro
+    color: black;
+    border-radius: 15px 15px 15px 0;
+  }
+}
+
+.burbuja {
+  padding: 10px 15px;
+  font-size: 16px;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.escribiendo {
+  font-style: italic;
+  color: #666;
+}
+
+// Estilo para las tarjetas de doctores dentro del chat
+.contenedor-doctores {
+  width: 100%;
+  margin-top: 10px;
+  
+  ion-card {
+    margin-inline: 0; // Quitar margenes extra de ionic
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+  }
+}
